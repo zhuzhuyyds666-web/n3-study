@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>标日 N3 · 90 天学习室</title>
+  <link rel="stylesheet" href="./studio.css">
+  <script type="module" src="./studio.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到今日课程</a>
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="./" aria-label="标日 N3 学习室首页">
+        <span class="brand-icon" lang="ja" aria-hidden="true">日</span>
+        <strong>标日 N3 学习室</strong>
+      </a>
+      <nav aria-label="主导航">
+        <button type="button" class="nav-button mobile-directory" id="open-directory" aria-expanded="false" aria-controls="directory">课程目录</button>
+        <button type="button" class="nav-button current-nav" id="today-link">今日学习</button>
+        <a class="nav-button plan-link" href="./plan.xlsx" download="N3_90天学习计划总表.xlsx">90 天总表 <span aria-hidden="true">↓</span></a>
+      </nav>
+    </div>
+  </header>
+  <div class="shell">
+    <aside id="directory" class="directory" aria-label="课程目录">
+      <div class="directory-top">
+        <div class="directory-heading">
+          <div><h2>课程目录</h2><span class="directory-count">90 天</span></div>
+          <button type="button" class="nav-button mobile-directory" id="close-directory" aria-label="关闭目录">✕</button>
+        </div>
+        <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索天数、课次或主题" aria-label="搜索天数、课次或主题"></label>
+        <div class="filter" aria-label="课程筛选">
+          <button type="button" data-filter="all" aria-pressed="true">全部</button>
+          <button type="button" data-filter="released" aria-pressed="false">已开放</button>
+        </div>
+      </div>
+      <div class="day-list" id="day-list"><p class="empty">正在加载课程目录…</p></div>
+      <div class="directory-foot"><span class="signal"></span> 每天 08:00 开放 · 北京时间</div>
+    </aside>
+    <button type="button" class="scrim" id="scrim" aria-label="关闭目录"></button>
+    <main id="main">
+      <div class="main-top"><span>学习计划 <span aria-hidden="true">/</span> <span id="breadcrumb">今日学习</span></span><time id="course-range">2026.11.13 – 2027.02.10</time></div>
+      <section class="hero" aria-labelledby="day-title">
+        <div class="hero-letter" aria-hidden="true" lang="ja">学</div>
+        <div id="hero-content">
+          <div class="hero-eyebrow">JLPT N3 · 90 天计划</div>
+          <h1 id="day-title">每日学习</h1>
+          <p class="hero-detail">正在加载今日课程…</p>
+        </div>
+      </section>
+      <div class="lower">
+        <section class="learning" aria-label="每日课程内容" id="learning">
+          <div class="tabbar" id="tabs" role="tablist" aria-label="学习资料"></div>
+          <div class="tab-content" id="panel" role="tabpanel" tabindex="0" aria-live="polite"><p class="empty">正在载入资料…</p></div>
+        </section>
+        <aside class="study-side" aria-label="学习进度和文件">
+          <section class="side-card" id="progress"></section>
+          <section class="side-card" id="downloads"></section>
+        </aside>
+      </div>
+      <footer class="footer"><span>新版标日中级 · 教材 32 课 / 24 个学习单元</span><a href="https://www.jlpt.jp/e/samples/forlearners.html" target="_blank" rel="noopener">JLPT 官方样题 ↗</a></footer>
+    </main>
+  </div>
+</body>
+</html>
